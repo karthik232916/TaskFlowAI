@@ -35,4 +35,46 @@ public class TaskService : ITaskService
 
         return task;
     }
+
+    public async Task<TaskItem?> UpdateTaskAsync(
+        int id,
+        string title,
+        string description,
+        string status,
+        string priority)
+    {
+        var task = await _context.Tasks
+            .FirstOrDefaultAsync(task => task.Id == id);
+
+        if (task is null)
+        {
+            return null;
+        }
+
+        task.Title = title;
+        task.Description = description;
+        task.Status = status;
+        task.Priority = priority;
+
+        await _context.SaveChangesAsync();
+
+        return task;
+    }
+
+    public async Task<bool> DeleteTaskAsync(int id)
+    {
+        var task = await _context.Tasks
+            .FirstOrDefaultAsync(task => task.Id == id);
+
+        if (task is null)
+        {
+            return false;
+        }
+
+        _context.Tasks.Remove(task);
+
+        await _context.SaveChangesAsync();
+
+        return true;
+    }
 }

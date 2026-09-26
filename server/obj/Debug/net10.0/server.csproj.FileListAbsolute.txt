@@ -171,3 +171,14 @@
 /Users/karthikk/Projects/TaskFlowAI/server/obj/Debug/net10.0/server.pdb
 /Users/karthikk/Projects/TaskFlowAI/server/obj/Debug/net10.0/server.genruntimeconfig.cache
 /Users/karthikk/Projects/TaskFlowAI/server/obj/Debug/net10.0/ref/server.dll
+/Users/karthikk/Projects/TaskFlowAI/server/bin/Debug/net10.0/HotChocolate.AspNetCore.Authorization.dll
+/Users/karthikk/Projects/TaskFlowAI/server/bin/Debug/net10.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/karthikk/Projects/TaskFlowAI/server/bin/Debug/net10.0/Microsoft.Bcl.Cryptography.dll
+/Users/karthikk/Projects/TaskFlowAI/server/bin/Debug/net10.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/karthikk/Projects/TaskFlowAI/server/bin/Debug/net10.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/karthikk/Projects/TaskFlowAI/server/bin/Debug/net10.0/Microsoft.IdentityModel.Logging.dll
+/Users/karthikk/Projects/TaskFlowAI/server/bin/Debug/net10.0/Microsoft.IdentityModel.Protocols.dll
+/Users/karthikk/Projects/TaskFlowAI/server/bin/Debug/net10.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/karthikk/Projects/TaskFlowAI/server/bin/Debug/net10.0/Microsoft.IdentityModel.Tokens.dll
+/Users/karthikk/Projects/TaskFlowAI/server/bin/Debug/net10.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/karthikk/Projects/TaskFlowAI/server/obj/Debug/net10.0/server.sourcelink.json

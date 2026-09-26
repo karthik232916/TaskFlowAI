@@ -11,4 +11,6 @@ public class TaskFlowDbContext : DbContext
     }
 
     public DbSet<TaskItem> Tasks => Set<TaskItem>();
+
+    public DbSet<User> Users => Set<User>();
 }
