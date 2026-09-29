@@ -1,0 +1,25 @@
+# .NET build output
+**/bin/
+**/obj/
+
+# .NET user-specific files
+*.user
+*.suo
+.vs/
+
+# Node / React
+**/node_modules/
+**/dist/
+**/dist-ssr/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

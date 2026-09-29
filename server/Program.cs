@@ -16,6 +16,14 @@ builder.Services.AddDbContext<TaskFlowDbContext>(options =>
     options.UseNpgsql(
         builder.Configuration.GetConnectionString("TaskFlowDatabase")));
 
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration =
+        builder.Configuration.GetConnectionString("Redis");
+
+    options.InstanceName = "TaskFlowAI:";
+});
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("Client", policy =>
@@ -29,9 +37,11 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddScoped<ITaskService, TaskService>();
 
-builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>(); 
+builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
 builder.Services.AddScoped<AuthService>();
+
+builder.Services.AddHttpClient<IAiTaskService, AiTaskService>();
 
 builder.AddGraphQL()
     .AddAuthorization()

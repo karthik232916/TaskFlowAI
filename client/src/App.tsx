@@ -13,6 +13,8 @@ import type { RootState, AppDispatch } from './store/store'
 import { GET_TASKS } from './graphql/taskQueries'
 import { DELETE_TASK } from './graphql/taskMutations'
 
+import AiTaskGenerator from "./components/AiTaskGenerator";
+
 import {
   setSearch,
   setPriority,
@@ -41,10 +43,9 @@ function App() {
     (state: RootState) => state.auth.isAuthenticated
   )
 
-  const { data, loading, error } =
-    useQuery<{ tasks: Task[] }>(GET_TASKS, {
-      skip: !isAuthenticated,
-    })
+  const {data,loading,error,refetch, } = useQuery<{ tasks: Task[] }>(GET_TASKS, {
+    skip: !isAuthenticated,
+  })
 
   const [deleteTask, deleteResult] = useMutation(
     DELETE_TASK,
@@ -127,6 +128,10 @@ function App() {
       <button onClick={handleLogout}>
         Logout
       </button>
+
+      <AiTaskGenerator
+        onTaskCreated={() => refetch()}
+      />
 
       <TaskForm
         isOpen={isTaskFormOpen}

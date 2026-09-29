@@ -5,3 +5,9 @@ export type Task = {
   status: 'Todo' | 'InProgress' | 'Completed';
   priority: 'Low' | 'Medium' | 'High';
 };
+export type AiGeneratedTask = {
+  title: string;
+  description: string;
+  status: 'Todo' | 'InProgress' | 'Completed';
+  priority: 'Low' | 'Medium' | 'High';
+};
